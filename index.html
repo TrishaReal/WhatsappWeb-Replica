@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp Web</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="./src/script.js"></script>
+
+    <div class="container">
+      <!-- LATO SINISTRO -->
+      <div class="leftside">
+        <div class="header-left">
+          <div class="left-header-logo">
+            <img src="./src/img/avatar02.png" alt="" />
+          </div>
+          <div class="left-header-icons">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+
+        <div class="left-searchbar">
+          <label class="search-label" for="search">
+            <i id="srch-lent" class="srch-icon fas fa-search"></i>
+            <i id="arrow" class="fas fa-arrow-left"></i>
+
+            <input
+              id="search"
+              type="text"
+              class="src-input"
+              placeholder="Cerca o inizia una nuova chat"
+            />
+          </label>
+        </div>
+
+        <div class="contacts" id="divContacts">
+          <ul id="ulContacts"></ul>
+        </div>
+      </div>
+      <!-- /FINE LATO SINISTRO -->
+      <!-- LATO DESTRO -->
+      <div id="chatside" class="rightside">
+        <img class="first-page" src="./src/img/first-page.png" alt="" />
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar01.png" alt="" />
+              <div>
+                <h1>Bruce Wayne</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>12.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Ciao! Come va?</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>Heyy! Io sto bene e tu?</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar04.png" alt="" />
+              <div>
+                <h1>Samantha Nicole</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>12.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Hey!</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>Ciao Tri!</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar05.png" alt="" />
+              <div>
+                <h1>John Paul</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>14.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Buongiorno John</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>Buongiorno Tri, come va?</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar06.png" alt="" />
+              <div>
+                <h1>Mighuel Santos</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>11.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Ciao</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>heyla!</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar07.png" alt="" />
+              <div>
+                <h1>Angelo M.</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>11.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Ciaooooo</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>heyla!</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                id="chatInput"
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar08.png" alt="" />
+              <div>
+                <h1>Cristina</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>11.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Ciaooooo</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>heyla!</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar09.png" alt="" />
+              <div>
+                <h1>Aaron Parker</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>11.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Come va?</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>Bene, grazie!</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="header-right">
+            <div class="right-header-logo">
+              <img src="./src/img/avatar010.png" alt="" />
+              <div>
+                <h1>Agata Holmes</h1>
+                <h3>
+                  Ultimo accesso oggi alle
+                  <span>11.00</span>
+                </h3>
+              </div>
+            </div>
+            <div class="right-header-icons">
+              <i class="srch-icon fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+
+          <div class="chat-container">
+            <div class="chat-user display-flex">
+              <div class="bubble sent">
+                <p>Goodmorning</p>
+                <span class="right">09:30</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Info Messaggio</a></li>
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bubble receive">
+                <p>Morning !</p>
+                <span class="right">09:34</span>
+                <div class="menu">
+                  <i class="fas fa-chevron-down left-arrow"></i>
+                  <ul class="dropdown">
+                    <li><a href="#">Rispondi</a></li>
+                    <li><a href="#">Inoltra messaggio</a></li>
+                    <li><a href="#">Messaggio importante</a></li>
+                    <li><a href="#">Ellimina messaggio</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arrow-backpg">
+                <i id="backpg" class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-footer">
+            <div id="footer-msg" class="footer-elements">
+              <span class="left-footer-icons">
+                <i class="emoji far fa-laugh"></i>
+                <i class="allegati fas fa-paperclip"></i>
+              </span>
+              <input
+                class="inputMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+              />
+
+              <i class="fas fa-microphone microfono"></i>
+              <i class="fas fa-paper-plane invio"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /FINE LATO DESTRO-->
+    </div>
+  </body>
+</html>
